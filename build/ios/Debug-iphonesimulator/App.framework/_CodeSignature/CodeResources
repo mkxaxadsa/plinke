@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		1iWdmLZr669BuCQHV42WP/3+FZg=
+		60SboAPTXx1uGhwfEAUWK8YCsNc=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		DlVfjQw5X8UO49iZrY1WuQm0vzI=
+		88yENtJO+LBpsvuaiJBpQPz5ZpM=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		kqf5fZpKLjKS5YdCYhVxKnmjaAs=
+		TARSkZc1sJ86hjVsShERinxgmPQ=
 		</data>
 		<key>flutter_assets/assets/bg.png</key>
 		<data>
@@ -86,11 +86,19 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		Gyyf/mU5SxulSgqkAldeWXCufZE=
+		ERETpOrsuKpP4E+yWwXqNQbsw8w=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		Bvk+P1ykE1PGRdktwgwDyz6AOqM=
+		</data>
+		<key>flutter_assets/packages/flutter_inappwebview/assets/t_rex_runner/t-rex.css</key>
+		<data>
+		mBihw0DQ+fObskdvU/uJxi4GQ/4=
+		</data>
+		<key>flutter_assets/packages/flutter_inappwebview/assets/t_rex_runner/t-rex.html</key>
+		<data>
+		60RUAYYoUnETCwVvpgmbGYgxn8Q=
 		</data>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -107,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZYyBlMx6e5PXapjWLFs4tj+WfcY3t9TjcPXRuG+CQWQ=
+			mGCgy8GRjZYQH4F/St9tI4Pj29QL8Poeko0iFJqS0e8=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YgjHhUDoRG47I2BKAN96xuyHWRQfXDcWy4CQl/szsx0=
+			en4ifMQbZJqjCeaKT1iSuoiV0jiQ7rcGyBPAga+YKJM=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -128,7 +136,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r5N7XG43v/W6kxbxLr7EB3rbyBSVgp1VZFelTA1H1J8=
+			lLer3stf2kXOnwocR90Ym0HM7rb3OQBwo2P5DIbBpts=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/bg.png</key>
@@ -240,7 +248,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O7GHKqLwkHXO5V+8z9+ML4yUmTRQi/Cn41XAqcFtKvc=
+			zaXAUizN8R8bDQoS8e+7JEdqyTBPddH6xMWImQS7HtU=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -248,6 +256,20 @@
 			<key>hash2</key>
 			<data>
 			Z8RP6Rg7AC553ef2l34piGYcmj5KPF/OloeH79vtgjw=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/flutter_inappwebview/assets/t_rex_runner/t-rex.css</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LlYyIL2FXhHyMNwnoNby/VuDmimW+G7cgCWqtF5vpcM=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/flutter_inappwebview/assets/t_rex_runner/t-rex.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3HLPwfHSpQE7ud40+MrPXiblQtfXE/y+CbhltKrKbd8=
 			</data>
 		</dict>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
