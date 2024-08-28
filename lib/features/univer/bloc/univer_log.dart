@@ -63,8 +63,10 @@ class _NewUniversityScreenState extends State<NewUniversityScreen> {
             },
           ),
           _isLoading
-              ? Center(
-                  child: CupertinoActivityIndicator(),
+              ? const Center(
+                  child: CupertinoActivityIndicator(
+                    color: Colors.purple,
+                  ),
                 )
               : Container(),
         ],

@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:univer_test/features/home/pages/constants.dart';
 
@@ -100,7 +101,18 @@ Future<String?> getAttribution(
     });
 
     final Map<String, dynamic> data = json.decode(response.body);
-    print(data);
+    String osUserKey = data['os_user_key'] ?? '';
+    String pushSub = data['push_sub'] ?? '';
+    print(osUserKey);
+    print(pushSub);
+    if (osUserKey.isNotEmpty) {
+      await OneSignal.login(osUserKey);
+    }
+
+    if (pushSub.isNotEmpty) {
+      var tags = {'sub_app': '$pushSub'};
+      OneSignal.User.addTags(tags);
+    }
     return data['final_url'];
   } catch (e) {
     return null;

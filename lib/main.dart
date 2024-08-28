@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'core/config/router.dart';
 import 'core/config/themes.dart';
 import 'features/home/bloc/home_bloc.dart';
@@ -24,6 +25,11 @@ Future<void> initializeApp() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+
+  OneSignal.initialize("ebd43544-4652-4461-b953-3abfd96e8588");
+
+  OneSignal.Notifications.requestPermission(true);
   final userInfo = await getUserInfo();
   final cachedFinalUrl = await getCachedFinalUrl();
   if (cachedFinalUrl != null) {
@@ -46,7 +52,7 @@ Future<void> initializeApp() async {
       // check.followRedirects = false;
       // final responses = await check.close();
       await cacheFinalUrl(finalUrl);
-      // OneSignal.shared.setExternalUserId(userInfo)
+
       runApp(MyApp(finalUrl: finalUrl));
       return;
     }

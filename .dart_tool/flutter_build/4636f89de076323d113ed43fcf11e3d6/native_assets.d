@@ -1,0 +1,1 @@
+ /Users/kilxsx/Downloads/unix/.dart_tool/flutter_build/4636f89de076323d113ed43fcf11e3d6/native_assets.yaml: 
