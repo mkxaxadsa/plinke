@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:univer_test/core/widgets/texts/text_r.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -9,26 +12,61 @@ import '../../../core/widgets/custom_scaffold.dart';
 import '../../../core/widgets/custom_appbar.dart';
 import '../../../core/widgets/texts/text_b.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
   @override
+  _SettingsPageState createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  XFile? _imageFile;
+
+  final ImagePicker _picker = ImagePicker();
+
+  Future<void> _pickImage() async {
+    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        _imageFile = pickedFile;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const CustomScaffold(
+    return CustomScaffold(
       body: Column(
         children: [
-          CustomAppbar(),
-          SizedBox(height: 20),
-          TextB(
+          const CustomAppbar(),
+          const SizedBox(height: 20),
+          const TextB(
             'Settings',
             fontSize: 32,
             color: AppColors.yellow,
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
+          GestureDetector(
+            onTap: _pickImage,
+            child: CircleAvatar(
+              radius: 50,
+              backgroundColor: AppColors.card,
+              backgroundImage:
+                  _imageFile != null ? FileImage(File(_imageFile!.path)) : null,
+              child: _imageFile == null
+                  ? const Icon(
+                      Icons.person,
+                      size: 50,
+                      color: AppColors.white,
+                    )
+                  : null,
+            ),
+          ),
+          const SizedBox(height: 50),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(
-              children: [
+              children: const [
                 _SettingsTile(
                   id: 1,
                   title: 'Terms of use',

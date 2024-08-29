@@ -1,5 +1,16 @@
 # This is a generated file; do not edit or check into version control.
+file_selector_linux=/Users/kilxsx/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.2+1/
+file_selector_macos=/Users/kilxsx/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4/
+file_selector_windows=/Users/kilxsx/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+2/
 flutter_inappwebview=/Users/kilxsx/.pub-cache/hosted/pub.dev/flutter_inappwebview-5.8.0/
+flutter_plugin_android_lifecycle=/Users/kilxsx/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.22/
+image_picker=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker-0.8.9/
+image_picker_android=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+13/
+image_picker_for_web=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_for_web-2.2.0/
+image_picker_ios=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.12/
+image_picker_linux=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.1+1/
+image_picker_macos=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.1+1/
+image_picker_windows=/Users/kilxsx/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.1+1/
 onesignal_flutter=/Users/kilxsx/.pub-cache/hosted/pub.dev/onesignal_flutter-5.2.3/
 path_provider=/Users/kilxsx/.pub-cache/hosted/pub.dev/path_provider-2.1.4/
 path_provider_android=/Users/kilxsx/.pub-cache/hosted/pub.dev/path_provider_android-2.2.10/
@@ -19,3 +30,6 @@ url_launcher_linux=/Users/kilxsx/.pub-cache/hosted/pub.dev/url_launcher_linux-3.
 url_launcher_macos=/Users/kilxsx/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.0/
 url_launcher_web=/Users/kilxsx/.pub-cache/hosted/pub.dev/url_launcher_web-2.3.3/
 url_launcher_windows=/Users/kilxsx/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.2/
+webview_flutter=/Users/kilxsx/.pub-cache/hosted/pub.dev/webview_flutter-3.0.4/
+webview_flutter_android=/Users/kilxsx/.pub-cache/hosted/pub.dev/webview_flutter_android-2.10.4/
+webview_flutter_wkwebview=/Users/kilxsx/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-2.9.5/
