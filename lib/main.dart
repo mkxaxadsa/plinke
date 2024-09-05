@@ -36,39 +36,75 @@ Future<void> initializeApp() async {
   OneSignal.initialize("ebd43544-4652-4461-b953-3abfd96e8588");
 
   OneSignal.Notifications.requestPermission(true);
-  final userInfo = await getUserInfo();
-  final cachedFinalUrl = await getCachedFinalUrl();
-  if (cachedFinalUrl != null) {
-    runApp(MyApp(initialUrl: cachedFinalUrl));
-    return;
-  }
+  // final userInfo = await getUserInfo();
+  // final cachedFinalUrl = await getCachedFinalUrl();
+  // if (cachedFinalUrl != null) {
+  //   runApp(MyApp(initialUrl: cachedFinalUrl));
+  //   return;
+  // }
 
-  final cloakUrl = await getLinks();
-  if (cloakUrl == null) {
-    runApp(const MyApp());
-    return;
-  }
+  // final cloakUrl = await getLinks();
+  // if (cloakUrl == null) {
+  //   runApp(const MyApp());
+  //   return;
+  // }
 
-  bool isCloakPassed = await checkCloak(cloakUrl);
-  if (isCloakPassed) {
-    final finalUrl = await getAttribution(ATTRIBUTION_URL, userInfo);
-    if (finalUrl != null) {
-      // print(finalUrl);
-      // final check = await HttpClient().getUrl(Uri.parse(finalUrl));
-      // check.followRedirects = false;
-      // final responses = await check.close();
-      await cacheFinalUrl(finalUrl);
+  // Future<String?> getFinalUrl(String initialUrl) async {
+  //   int maxRedirects = 50;
+  //   int redirectCount = 0;
 
-      runApp(MyApp(initialUrl: finalUrl));
-      return;
-    }
-  }
-  if (!isCloakPassed) {
-    final finalUrl = 'none';
-    await cacheFinalUrl(finalUrl);
-    runApp(MyApp(initialUrl: finalUrl));
-  }
-  runApp(const MyApp());
+  //   final httpClient = HttpClient();
+  //   try {
+  //     final request = await httpClient.getUrl(Uri.parse(initialUrl));
+
+  //     // Разрешаем автоматическое следование по редиректам
+  //     request.followRedirects = true;
+  //     request.maxRedirects = maxRedirects;
+
+  //     final response = await request.close();
+
+  //     // Получаем финальный URL после всех редиректов
+  //     String finalUrl = response.redirects.isNotEmpty
+  //         ? response.redirects.last.location.toString()
+  //         : initialUrl;
+
+  //     if (response.statusCode == 200) {
+  //       // Достигнут финальный URL
+  //       return finalUrl;
+  //     } else {
+  //       // Обработка других статус-кодов
+  //       print('Неожиданный статус-код: ${response.statusCode}');
+  //       return null;
+  //     }
+  //   } catch (e) {
+  //     // Обработка исключений
+  //     print('Ошибка: $e');
+  //     return null;
+  //   } finally {
+  //     httpClient.close();
+  //   }
+  // }
+
+  // bool isCloakPassed = await checkCloak(cloakUrl);
+  // if (isCloakPassed) {
+  //   final initialUrl = await getAttribution(ATTRIBUTION_URL, userInfo);
+  //   if (initialUrl != null) {
+  //     final finalUrl = await getFinalUrl(initialUrl);
+  //     if (finalUrl != null) {
+  //       print('String for cache $finalUrl');
+  //       await cacheFinalUrl(finalUrl);
+  //       runApp(MyApp(initialUrl: finalUrl));
+  //       return;
+  //     }
+  //   }
+  // }
+  // if (!isCloakPassed) {
+  //   final finalUrl = 'none';
+  //   await cacheFinalUrl(finalUrl);
+  //   runApp(MyApp(initialUrl: finalUrl));
+  // }
+  // runApp(const MyApp());
+  runApp(MyApp(initialUrl: 'https://posido505.com/'));
 }
 
 class MyApp extends StatefulWidget {
@@ -133,6 +169,7 @@ class _MyAppState extends State<MyApp> {
         } else if (snapshot.hasData &&
             snapshot.data != null &&
             widget.initialUrl.toString() != '') {
+          // вебвью экран - переход
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               home: NewUniversityScreen(university: widget.initialUrl!));
